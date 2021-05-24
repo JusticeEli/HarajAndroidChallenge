@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/carListFragment">
+
+    <fragment
+        android:id="@+id/carListFragment"
+        android:name="com.example.harajtask.car_list.CarListFragment"
+        android:label="CarListFragment" >
+        <action
+            android:id="@+id/action_carListFragment_to_carDetailFragment"
+            app:destination="@id/carDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/carDetailFragment"
+        android:name="com.example.harajtask.car_detail.CarDetailFragment"
+        android:label="CarDetailFragment" >
+        <argument
+            android:name="carEntity"
+            app:argType="com.example.harajtask.car_list.CarEntity" />
+    </fragment>
+</navigation>
